@@ -1,0 +1,43 @@
+#block {
+    background-color: green;
+    display: block;
+}
+#inline {
+    background-color: red;
+
+    display: inline;
+}
+
+#sementic {
+    width: 400px;
+    height: 200px;
+    margin: 0 auto;
+    border-radius: 10%;
+    background-color: green;
+
+}
+
+.wrapper1 {
+    display: flex;
+    background-color: rgb(207, 232, 220);
+    padding: 0.5em;
+  }
+  
+  .wrapper1 > div {
+    flex: 1;
+  }
+.wrapper2 {
+    display: grid;
+    background-color: rgb(220, 232, 220);
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 100px 100px;
+    grid-gap: 10px;
+}
+    
+#boxModel {
+    padding : 5px;
+    border : 1px solid yellow;
+    margin : 5px;
+    background-color :blue;
+    width: 50px;
+}
