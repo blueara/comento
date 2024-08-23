@@ -19,12 +19,21 @@
 
 .wrapper1 {
     display: flex;
+    width: 80%;
+    margin: 0 auto;
     background-color: rgb(207, 232, 220);
     padding: 0.5em;
   }
   
-  .wrapper1 > div {
-    flex: 1;
+  .wrapper1 > .box1 {
+    flex-basis: auto;
+
+  }
+  
+  .wrapper1 > .box2 {
+    margin-left: 0.5em;
+    flex-basis: auto;
+
   }
 .wrapper2 {
     display: grid;
