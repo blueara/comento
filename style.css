@@ -1,14 +1,22 @@
-#block {
+/* class로 css 작업하기 Wrapper(wrap)  –   container, section, part  –   box */
+
+html {
+    margin: 0;
+}
+.block {
     background-color: green;
     display: block;
 }
-#inline {
+.inline {
     background-color: red;
 
     display: inline;
 }
-
-#sementic {
+.intro {
+    color: blue;
+    font-size: 24px;
+}
+.sementic {
     width: 400px;
     height: 200px;
     margin: 0 auto;
@@ -37,13 +45,17 @@
   }
 .wrapper2 {
     display: grid;
+    width: 80%;
+    margin: 0 auto;
+    padding: 0.5em;
+
     background-color: rgb(220, 232, 220);
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 100px 100px;
     grid-gap: 10px;
 }
     
-#boxModel {
+.boxModel {
     padding : 5px;
     border : 1px solid yellow;
     margin : 5px;
@@ -54,7 +66,7 @@
     background-color: rgb(220, 232, 220);
 
 }
-#whatId{
+.whatId{
     background-color: rgb(180, 170, 220);
     
 }
