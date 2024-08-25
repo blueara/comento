@@ -1,0 +1,29 @@
+<!-- 지뢰찾기를 만듭니다.
+로직 생각해보기 
+1. N*N 2차배열 생성
+2. 배열마다 랜덤으로 지뢰 위치 넣기 
+-->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>지뢰찾기 게임</title>
+    <link rel="stylesheet" href="./asset/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="mine-counter">지뢰: 10</div>
+            <div class="timer">타이머: 00:00</div>
+        </div>
+        <div class="settings">
+            <label for="grid-size">그리드 크기 선택: </label>
+            <input type="number" id="grid-size" value="10" min="2" max="50">
+            <button onclick="createGrid()">생성</button>
+        </div>
+        <div id="grid-container" class="grid"></div>
+    </div>
+    <script src="./asset/js/mine.js"></script>
+</body>
+</html>
