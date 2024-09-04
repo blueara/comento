@@ -5,52 +5,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./asset/css/style.css">
-
+    <script src="./asset/js/script.js" defer></script>
     <title>계산기</title>
 </head>
 <body>
     <div class="container">
         <div class="input-window">
-            <input type="number" disabled/>
+            <input type="text" id="display" disabled />
         </div>
         <div>
-            <!-- 4*5의 테이블을 만들자 -->
+            <!-- 4x5의 테이블을 생성 -->
             <table class="number-pad">
                 <tr>
-                    
-                  <td>
-                    <button>(</button>
-                </td>
-                  <td><button>)</button></td>
-                  <td><button>%</button></td>
-                  <td><button id="reset">AC</button></td>
+                    <td><button onclick="press('(')">(</button></td>
+                    <td><button onclick="press(')')">)</button></td>
+                    <td><button onclick="press('%')">%</button></td>
+                    <td><button id="reset" onclick="clearDisplay()">C</button></td>
                 </tr>
                 <tr>
-                    <td><button>7</button></td>
-                    <td><button>8</button></td>
-                    <td><button>9</button></td>
-                    <td><button>/</button></td>
+                    <td><button onclick="press('7')">7</button></td>
+                    <td><button onclick="press('8')">8</button></td>
+                    <td><button onclick="press('9')">9</button></td>
+                    <td><button onclick="press('/')">/</button></td>
                 </tr>
                 <tr>
-                    <td><button>4</button></td>
-                    <td><button>5</button></td>
-                    <td><button>6</button></td>
-                    <td><button>*</button></td>
+                    <td><button onclick="press('4')">4</button></td>
+                    <td><button onclick="press('5')">5</button></td>
+                    <td><button onclick="press('6')">6</button></td>
+                    <td><button onclick="press('*')">*</button></td>
                 </tr>
                 <tr>
-                    <td><button>1</button></td>
-                    <td><button>2</button></td>
-                    <td><button>3</button></td>
-                    <td><button>-</button></td>
+                    <td><button onclick="press('1')">1</button></td>
+                    <td><button onclick="press('2')">2</button></td>
+                    <td><button onclick="press('3')">3</button></td>
+                    <td><button onclick="press('-')">-</button></td>
                 </tr>
                 <tr>
-                    <td><button>0</button></td>
-                    <td><button>.</button></td>
-                    <td><button>=</button></td>
-                    <td><button>+</button></td>
+                    <td><button onclick="press('0')">0</button></td>
+                    <td><button onclick="press('.')">.</button></td>
+                    <td><button onclick="calculate()">=</button></td>
+                    <td><button onclick="press('+')">+</button></td>
                 </tr>
-              </table>
-              
+            </table>
         </div>
     </div>
 </body>
