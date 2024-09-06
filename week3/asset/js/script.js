@@ -8,7 +8,8 @@ const decreaseBattery = () => {
     batteryElement.textContent = batteryLevel;
   }
   if (batteryLevel === 0) {
-    currentTime.style.backgroundColor = "black";
+    currentTime.style.backgroundColor = "#343434";
+    currentTime.style.color = "#343434";
   }
 };
 setInterval(decreaseBattery, 1000);
@@ -56,6 +57,13 @@ alarmForm.addEventListener("submit", (e) => {
         2,
         "0"
       )}:${second.padStart(2, "0")}`;
+      if (alarms.includes(alarmTime)) {
+        alert("이미 같은 알람 시간이 설정되어 있습니다!");
+        return; // 중복 알람 시간인 경우 함수 종료
+      }
+
+      // 설정되지 않은 알람 시간인 경우 배열에 추가
+
       alarms.push(alarmTime);
       const alarmElement = document.createElement("div");
       alarmElement.textContent = `알람: ${alarmTime}`;
