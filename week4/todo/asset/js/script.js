@@ -6,7 +6,7 @@ document
     const todoWork = document.getElementById("todoWork").value; // 입력된 할 일
     const contents = document.getElementById("contents"); // 할 일 목록이 표시될 div
 
-    if (todoWork.trim() === "") return; // 빈 입력을 방지
+    if (!todoWork.trim()) return; // 빈 입력을 방지
 
     // 새로운 할 일 항목을 위한 div 생성
     const newTodoDiv = document.createElement("div");
